@@ -6,13 +6,13 @@ RUN set -ex \
 	&& apk add --no-cache wget su-exec \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV QTUM_VERSION 1.0.2
-ENV QTUM_URL https://github.com/qtumproject/qtum/releases/download/mainnet-ignition-v1.0.2/qtum-0.14.3-x86_64-linux-gnu.tar.gz
+ENV QTUM_VERSION 1.1.0
+ENV QTUM_CLI 0.14.6
 
 # install qtum binaries
 RUN set -ex \
 	&& cd /tmp \
-	&& wget --no-check-certificate -qO qtum.tar.gz "$QTUM_URL" \
+	&& wget --no-check-certificate -qO qtum.tar.gz https://github.com/qtumproject/qtum/releases/download/mainnet-ignition-v$QTUM_VERSION/qtum-$QTUM_CLI-x86_64-linux-gnu.tar.gz \
 	&& tar -xzvf qtum.tar.gz -C /usr/local --strip-components=1 --exclude=qtum-qt --exclude=test_qtum \
 	&& rm -rf /tmp/*
 
