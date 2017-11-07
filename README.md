@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/github/license/baryon/docker-qtum.svg)](https://github.com/baryon/docker-qtum/blob/master/LICENSE)
 
-Git repository: https://github.com/crypt0m1nd3r/docker-qtum
+Frok from Git repository: https://github.com/crypt0m1nd3r/docker-qtum
 
 ## Intro
 
